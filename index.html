@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>watch</title>
+    <link rel="stylesheet" href="watch.css">
+</head>
+
+<body>
+    <div id="main">
+        <div id="hour">
+
+        </div>
+        <div id="minute"></div>
+        <div id="second"></div>
+    </div>
+    <script>
+        second.style.backgroundColor="red";
+        hour.style.backgroundColor="blue";
+        minute.style.backgroundColor="green";
+        setInterval(() => {
+            let d = new Date();
+          let  htime = d.getHours();
+          let  mtime = d.getMinutes();
+          let  stime = d.getSeconds();
+          let  hr = 30 * htime + mtime / 2;
+          let  mr = 6 * mtime;
+          let  sr = 6 * stime;
+            // hour.style.transform = 'rotate(' + (hr) + 'deg)'
+            hour.style.transform=`rotate(${hr}deg)`;
+            minute.style.transform = 'rotate(' + (mr) + 'deg)'
+            second.style.transform = 'rotate(' + (sr) + 'deg)'
+
+        }, 1000)
+
+    </script>
+</body>
+
+</html>
